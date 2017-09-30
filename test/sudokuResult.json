@@ -1,0 +1,940 @@
+[
+  [
+    {
+      "row": 0,
+      "column": 0,
+      "box": 1,
+      "value": 5,
+      "isPermanent": true,
+      "posibilities": []
+    },
+    {
+      "row": 0,
+      "column": 1,
+      "box": 1,
+      "value": 3,
+      "isPermanent": true,
+      "posibilities": []
+    },
+    {
+      "row": 0,
+      "column": 2,
+      "box": 1,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "row": 0,
+      "column": 3,
+      "box": 2,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "row": 0,
+      "column": 4,
+      "box": 2,
+      "value": 7,
+      "isPermanent": true,
+      "posibilities": []
+    },
+    {
+      "row": 0,
+      "column": 5,
+      "box": 2,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        2,
+        4,
+        6,
+        8
+      ]
+    },
+    {
+      "row": 0,
+      "column": 6,
+      "box": 3,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        1,
+        3,
+        4,
+        5,
+        8,
+        9
+      ]
+    },
+    {
+      "row": 0,
+      "column": 7,
+      "box": 3,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        9
+      ]
+    },
+    {
+      "row": 0,
+      "column": 8,
+      "box": 3,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8
+      ]
+    }
+  ],
+  [
+    {
+      "row": 1,
+      "column": 0,
+      "box": 1,
+      "value": 6,
+      "isPermanent": true,
+      "posibilities": []
+    },
+    {
+      "row": 1,
+      "column": 1,
+      "box": 1,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        2,
+        4,
+        7
+      ]
+    },
+    {
+      "row": 1,
+      "column": 2,
+      "box": 1,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        2,
+        4,
+        7
+      ]
+    },
+    {
+      "row": 1,
+      "column": 3,
+      "box": 2,
+      "value": 1,
+      "isPermanent": true,
+      "posibilities": []
+    },
+    {
+      "row": 1,
+      "column": 4,
+      "box": 2,
+      "value": 9,
+      "isPermanent": true,
+      "posibilities": []
+    },
+    {
+      "row": 1,
+      "column": 5,
+      "box": 2,
+      "value": 5,
+      "isPermanent": true,
+      "posibilities": []
+    },
+    {
+      "row": 1,
+      "column": 6,
+      "box": 3,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        1,
+        3,
+        4,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "row": 1,
+      "column": 7,
+      "box": 3,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "row": 1,
+      "column": 8,
+      "box": 3,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        1,
+        2,
+        3,
+        4,
+        7,
+        8
+      ]
+    }
+  ],
+  [
+    {
+      "row": 2,
+      "column": 0,
+      "box": 1,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "row": 2,
+      "column": 1,
+      "box": 1,
+      "value": 9,
+      "isPermanent": true,
+      "posibilities": []
+    },
+    {
+      "row": 2,
+      "column": 2,
+      "box": 1,
+      "value": 8,
+      "isPermanent": true,
+      "posibilities": []
+    },
+    {
+      "row": 2,
+      "column": 3,
+      "box": 2,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "row": 2,
+      "column": 4,
+      "box": 2,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "row": 2,
+      "column": 5,
+      "box": 2,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "row": 2,
+      "column": 6,
+      "box": 3,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        1,
+        3,
+        4,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "row": 2,
+      "column": 7,
+      "box": 3,
+      "value": 6,
+      "isPermanent": true,
+      "posibilities": []
+    },
+    {
+      "row": 2,
+      "column": 8,
+      "box": 3,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        1,
+        2,
+        3,
+        4,
+        7,
+        8
+      ]
+    }
+  ],
+  [
+    {
+      "row": 3,
+      "column": 0,
+      "box": 4,
+      "value": 8,
+      "isPermanent": true,
+      "posibilities": []
+    },
+    {
+      "row": 3,
+      "column": 1,
+      "box": 4,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        1,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "row": 3,
+      "column": 2,
+      "box": 4,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        1,
+        2,
+        3,
+        5,
+        9
+      ]
+    },
+    {
+      "row": 3,
+      "column": 3,
+      "box": 5,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        1,
+        5,
+        7,
+        9
+      ]
+    },
+    {
+      "row": 3,
+      "column": 4,
+      "box": 5,
+      "value": 6,
+      "isPermanent": true,
+      "posibilities": []
+    },
+    {
+      "row": 3,
+      "column": 5,
+      "box": 5,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        1,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "row": 3,
+      "column": 6,
+      "box": 6,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        4,
+        5,
+        7,
+        9
+      ]
+    },
+    {
+      "row": 3,
+      "column": 7,
+      "box": 6,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        2,
+        4,
+        5,
+        9
+      ]
+    },
+    {
+      "row": 3,
+      "column": 8,
+      "box": 6,
+      "value": 3,
+      "isPermanent": true,
+      "posibilities": []
+    }
+  ],
+  [
+    {
+      "row": 4,
+      "column": 0,
+      "box": 4,
+      "value": 4,
+      "isPermanent": true,
+      "posibilities": []
+    },
+    {
+      "row": 4,
+      "column": 1,
+      "box": 4,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        1,
+        2,
+        5,
+        6
+      ]
+    },
+    {
+      "row": 4,
+      "column": 2,
+      "box": 4,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        1,
+        2,
+        5,
+        6,
+        9
+      ]
+    },
+    {
+      "row": 4,
+      "column": 3,
+      "box": 5,
+      "value": 8,
+      "isPermanent": true,
+      "posibilities": []
+    },
+    {
+      "row": 4,
+      "column": 4,
+      "box": 5,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        1,
+        5,
+        7
+      ]
+    },
+    {
+      "row": 4,
+      "column": 5,
+      "box": 5,
+      "value": 3,
+      "isPermanent": true,
+      "posibilities": []
+    },
+    {
+      "row": 4,
+      "column": 6,
+      "box": 6,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        4,
+        5,
+        7,
+        9
+      ]
+    },
+    {
+      "row": 4,
+      "column": 7,
+      "box": 6,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        2,
+        4,
+        5,
+        9
+      ]
+    },
+    {
+      "row": 4,
+      "column": 8,
+      "box": 6,
+      "value": 1,
+      "isPermanent": true,
+      "posibilities": []
+    }
+  ],
+  [
+    {
+      "row": 5,
+      "column": 0,
+      "box": 4,
+      "value": 7,
+      "isPermanent": true,
+      "posibilities": []
+    },
+    {
+      "row": 5,
+      "column": 1,
+      "box": 4,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        1,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "row": 5,
+      "column": 2,
+      "box": 4,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        1,
+        2,
+        3,
+        5,
+        9
+      ]
+    },
+    {
+      "row": 5,
+      "column": 3,
+      "box": 5,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        1,
+        5,
+        9
+      ]
+    },
+    {
+      "row": 5,
+      "column": 4,
+      "box": 5,
+      "value": 2,
+      "isPermanent": true,
+      "posibilities": []
+    },
+    {
+      "row": 5,
+      "column": 5,
+      "box": 5,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        1,
+        4,
+        5
+      ]
+    },
+    {
+      "row": 5,
+      "column": 6,
+      "box": 6,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        4,
+        5,
+        8,
+        9
+      ]
+    },
+    {
+      "row": 5,
+      "column": 7,
+      "box": 6,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        2,
+        4,
+        5,
+        9
+      ]
+    },
+    {
+      "row": 5,
+      "column": 8,
+      "box": 6,
+      "value": 6,
+      "isPermanent": true,
+      "posibilities": []
+    }
+  ],
+  [
+    {
+      "row": 6,
+      "column": 0,
+      "box": 7,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        9
+      ]
+    },
+    {
+      "row": 6,
+      "column": 1,
+      "box": 7,
+      "value": 6,
+      "isPermanent": true,
+      "posibilities": []
+    },
+    {
+      "row": 6,
+      "column": 2,
+      "box": 7,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        9
+      ]
+    },
+    {
+      "row": 6,
+      "column": 3,
+      "box": 8,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        2,
+        3,
+        5,
+        7
+      ]
+    },
+    {
+      "row": 6,
+      "column": 4,
+      "box": 8,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "row": 6,
+      "column": 5,
+      "box": 8,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        2,
+        3,
+        7
+      ]
+    },
+    {
+      "row": 6,
+      "column": 6,
+      "box": 9,
+      "value": 2,
+      "isPermanent": true,
+      "posibilities": []
+    },
+    {
+      "row": 6,
+      "column": 7,
+      "box": 9,
+      "value": 8,
+      "isPermanent": true,
+      "posibilities": []
+    },
+    {
+      "row": 6,
+      "column": 8,
+      "box": 9,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        1,
+        4
+      ]
+    }
+  ],
+  [
+    {
+      "row": 7,
+      "column": 0,
+      "box": 7,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "row": 7,
+      "column": 1,
+      "box": 7,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "row": 7,
+      "column": 2,
+      "box": 7,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "row": 7,
+      "column": 3,
+      "box": 8,
+      "value": 4,
+      "isPermanent": true,
+      "posibilities": []
+    },
+    {
+      "row": 7,
+      "column": 4,
+      "box": 8,
+      "value": 1,
+      "isPermanent": true,
+      "posibilities": []
+    },
+    {
+      "row": 7,
+      "column": 5,
+      "box": 8,
+      "value": 9,
+      "isPermanent": true,
+      "posibilities": []
+    },
+    {
+      "row": 7,
+      "column": 6,
+      "box": 9,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        1,
+        3,
+        6
+      ]
+    },
+    {
+      "row": 7,
+      "column": 7,
+      "box": 9,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        1,
+        3
+      ]
+    },
+    {
+      "row": 7,
+      "column": 8,
+      "box": 9,
+      "value": 5,
+      "isPermanent": true,
+      "posibilities": []
+    }
+  ],
+  [
+    {
+      "row": 8,
+      "column": 0,
+      "box": 7,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "row": 8,
+      "column": 1,
+      "box": 7,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "row": 8,
+      "column": 2,
+      "box": 7,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "row": 8,
+      "column": 3,
+      "box": 8,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        2,
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "row": 8,
+      "column": 4,
+      "box": 8,
+      "value": 8,
+      "isPermanent": true,
+      "posibilities": []
+    },
+    {
+      "row": 8,
+      "column": 5,
+      "box": 8,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "row": 8,
+      "column": 6,
+      "box": 9,
+      "value": 0,
+      "isPermanent": false,
+      "posibilities": [
+        1,
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "row": 8,
+      "column": 7,
+      "box": 9,
+      "value": 7,
+      "isPermanent": true,
+      "posibilities": []
+    },
+    {
+      "row": 8,
+      "column": 8,
+      "box": 9,
+      "value": 9,
+      "isPermanent": true,
+      "posibilities": []
+    }
+  ]
+]

@@ -1,0 +1,23 @@
+{
+  "name": "sudoku-solver",
+  "version": "1.0.0",
+  "description": "A sudoku solver challenge I'm doing with a friend",
+  "main": "sudoku.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afresquet/Sudoku-solver.git"
+  },
+  "author": "Alvaro Fresquet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/afresquet/Sudoku-solver/issues"
+  },
+  "homepage": "https://github.com/afresquet/Sudoku-solver#readme",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^3.5.3"
+  }
+}

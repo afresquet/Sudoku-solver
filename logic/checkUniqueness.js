@@ -12,7 +12,6 @@ module.exports = (sudoku, cells) => {
         let otherRowCell = sudoku[cell.row][i];
         for (let otherPos in otherRowCell.posibilities) {
           otherPos = otherRowCell.posibilities[otherPos];
-          console.log(`${otherPos} + ${otherRowCell.row}`)
         }
         
       }

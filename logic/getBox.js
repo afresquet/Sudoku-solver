@@ -6,7 +6,7 @@ module.exports = (x, y) => {
 
   for (let x = 0; x < 3; x++) {
     for (let y = 0; y < 3; y++) {
-      if (boxX === x && boxY === y) return boxNumber;
+      if (boxX === x && boxY === y) return boxNumber + 1;
       boxNumber++;
     }
   }
