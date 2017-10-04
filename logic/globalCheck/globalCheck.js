@@ -1,4 +1,4 @@
-const getNonPermanentCells = require('./getNonPermanentCells'),
+const getNonPermanentCells = require('../getNonPermanentCells'),
       checkBox = require('./checkBox'),
       checkRow = require('./checkRow'),
       checkColumn = require('./checkColumn');

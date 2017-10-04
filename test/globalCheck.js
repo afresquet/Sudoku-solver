@@ -1,8 +1,8 @@
 const expect = require('chai').expect,
       getNonPermanentCells = require('../logic/getNonPermanentCells'),
-      checkBox = require('../logic/checkBox'),
-      checkRow = require('../logic/checkRow'),
-      checkColumn = require('../logic/checkColumn');
+      checkBox = require('../logic/globalCheck/checkBox'),
+      checkRow = require('../logic/globalCheck/checkRow'),
+      checkColumn = require('../logic/globalCheck/checkColumn');
 
 describe('Reduce possibilities checking cell\'s sorroundings', () => {
   let sudoku = require('./helpers/sudoku.json'),

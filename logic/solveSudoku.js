@@ -1,8 +1,10 @@
 const fs = require('fs'),
       getNonPermanentCells = require('./getNonPermanentCells'),
-      globalCheck = require('./globalCheck'),
-      checkUniqueness = require('./checkUniqueness'),
-      createDisplay = require('./createDisplay');
+      globalCheck = require('./globalCheck/globalCheck'),
+      checkUniqueness = require('./checkUniqueness/checkUniqueness'),
+      createDisplay = require('./createDisplay'),
+      debugGeneration = require('./debugGeneration/debugGeneration'),
+      finalCheck = require('./finalCheck/finalCheck');
 
 // Declare variables to hold the previous amount of non permanent cells
 // and the generation version.
@@ -20,8 +22,21 @@ const solveSudoku = sudoku => {
     console.log(createDisplay(sudoku));
     return;
   }
-  // If there is no non permanent cells available, the process is done and it gets returned.
-  if (cells.length == 0) return console.log(createDisplay(sudoku));
+  // If there is no non permanent cells available, the process is done.
+  if (cells.length == 0) {
+    // Create a display array for the result
+    let result = createDisplay(sudoku);
+    
+    // If it's correct, log it to the console
+    // if not notify that is wrong and log it to the console.
+    if (finalCheck(result))
+      return console.log(result);
+    else {
+      console.log('It\'s wrong.');
+      console.log(result);
+      return;
+    }
+  }
   
   // Store the current amount of permanent cells to compare next generation.
   prevLength = cells.length;
@@ -31,6 +46,9 @@ const solveSudoku = sudoku => {
   
   // Find any unique possibility of a cell and set it as its value.
   checkUniqueness(sudoku, cells);
+  
+  // Catch any generation error.
+  debugGeneration(sudoku, generation);
 
   // If this is the first generation, all files in './generations/' get deleted.
   if (generation == 1) deleteGenerations('generations');
