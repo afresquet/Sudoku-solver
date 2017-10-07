@@ -5,7 +5,7 @@ const { expect } = require('chai'),
       otherColumnPossibilities = require('../logic/checkUniqueness/otherColumnPossibilities'),
       checkUniqueness = require('../logic/checkUniqueness/checkUniqueness');
 
-describe('Check for unique possibilities', () => {
+xdescribe('Check for unique possibilities', () => {
   let sudoku = require('./helpers/afterCheck.json'),
       cells = getNonPermanentCells(sudoku),
       boxArray = otherBoxPossibilities(sudoku, sudoku[0][5]),

@@ -8,10 +8,9 @@ module.exports = (sudoku, cells) => {
         permanentValues = new Array();
 
     // Loop through every cell
-    for (let x = 0; x < 9; x++)
-      for (let y = 0; y < 9; y++) {
-        let otherCell = sudoku[x][y],
-            otherBox = otherCell.box;
+    for (let row of sudoku)
+      for (let otherCell of row) {
+        let otherBox = otherCell.box;
 
         // If its box is the same as the cell, it's permanent and it's not the same as the cell
         // Add it to the permanentValues array

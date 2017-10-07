@@ -3,7 +3,7 @@ const { expect } = require('chai'),
       rowDebug = require('../logic/debugGeneration/rowDebug')
       columnDebug = require('../logic/debugGeneration/columnDebug');
 
-describe('Generation debugger', () => {
+xdescribe('Generation debugger', () => {
   let sudoku = require('./helpers/broken-generation-1.json'),
       boxReport = boxDebug(sudoku),
       rowReport = rowDebug(sudoku),

@@ -1,0 +1,13 @@
+extends layouts/main
+
+block content
+  section.test
+    .container
+      each row in sudoku
+        ul
+          each cell in row
+            li(style="display: inline-block;")= cell
+
+      br
+
+      a(href="/") Go back

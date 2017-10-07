@@ -10,6 +10,7 @@ const fs = require('fs'),
 // Declare variables to hold the previous amount of non permanent cells
 // and the generation version.
 let sudoku,
+    cells,
     prevLength,
     generation = 1;
 
@@ -18,28 +19,25 @@ const solveSudoku = template => {
   if (!sudoku) sudoku = createSudoku(template);
 
   // Get the array of non permanent cells
-  let cells = getNonPermanentCells(sudoku);
+  cells = getNonPermanentCells(sudoku);
   
   // If the number of non permanent cells is the same as the previous generation
   // end the process and return the progress made until the end.
   if (cells.length === prevLength) {
     console.log('Can\'t be solved, made it this far:');
-    console.log(createDisplay(sudoku));
-    return;
+    return console.log(createDisplay(sudoku));
   }
   // If there is no non permanent cells available, the process is done.
   if (cells.length == 0) {
     // Create a display array for the result
     let result = createDisplay(sudoku);
-    
+
     // If it's correct, log it to the console
     // if not notify that is wrong and log it to the console.
-    if (finalCheck(result))
-      return console.log(result);
+    if (finalCheck(result)) return result;
     else {
       console.log('It\'s wrong.');
-      console.log(result);
-      return;
+      return result;
     }
   }
   
@@ -47,23 +45,23 @@ const solveSudoku = template => {
   prevLength = cells.length;
 
   // Check every non permanent cell's possibilities.
-  globalCheck(sudoku, cells);
+  globalCheck(cells);
   
   // Find any unique possibility of a cell and set it as its value.
-  checkUniqueness(sudoku, cells);
+  // checkUniqueness(cells);
   
   // Catch any generation error.
-  debugGeneration(sudoku, generation);
+  // debugGeneration(sudoku, generation);
 
   // If this is the first generation, all files in './generations/' get deleted.
-  if (generation == 1) deleteGenerations('generations');
+  // if (generation == 1) deleteGenerations('generations');
   // Write a JSON file with the generation's values.
-  fs.writeFile(`generations/generation-${generation}.json`, JSON.stringify(createDisplay(sudoku)));
+  // fs.writeFile(`generations/generation-${generation}.json`, JSON.stringify(createDisplay(sudoku)));
   // Increase the generation version.
-  generation++;
+  // generation++;
   
   // Recursively re-run this function.
-  solveSudoku(sudoku);
+  // solveSudoku(sudoku);
 }
 
 module.exports = solveSudoku;

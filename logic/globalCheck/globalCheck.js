@@ -3,8 +3,8 @@ const getNonPermanentCells = require('../getNonPermanentCells'),
       checkRow = require('./checkRow'),
       checkColumn = require('./checkColumn');
 
-module.exports = (sudoku, cells) => {
-  checkBox(sudoku, cells);
-  checkRow(sudoku, cells);
-  checkColumn(sudoku, cells);
+module.exports = cells => {
+  for (let cell of cells) {
+    cell.checkPossibilities();
+  }
 }

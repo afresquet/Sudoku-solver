@@ -1,13 +1,13 @@
-const router = require('express').Router();
+const router = require('express').Router(),
+      solveSudoku = require('../logic/solveSudoku');
   
 router.get('/', (req, res) => res.render('index', { t: res.__ }));
 
-router.post('/send', (req, res) => {
+router.post('/solve', (req, res) => {
   let sudoku = getSudokuTemplate(req.body);
 
-  console.log(sudoku);
-
-  res.redirect('/');
+  // res.render('test', { sudoku: result });
+  res.redirect('/')
 });
   
 module.exports = router;

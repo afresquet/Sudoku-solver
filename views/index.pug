@@ -3,7 +3,7 @@ extends layouts/main
 block content
   section.index
     .container
-      form(action="/send", method="POST").sudoku
+      form(action="/solve", method="POST").sudoku
         .box#box-1
           input(type="number", name="cell_1_1", value="5").row-1.col-1
           input(type="number", name="cell_1_2", value="3").row-1.col-2
