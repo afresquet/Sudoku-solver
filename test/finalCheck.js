@@ -1,4 +1,4 @@
-const expect = require('chai').expect,
+const { expect } = require('chai'),
       boxFinal = require('../logic/finalCheck/boxFinal'),
       rowFinal = require('../logic/finalCheck/rowFinal'),
       columnFinal = require('../logic/finalCheck/columnFinal');

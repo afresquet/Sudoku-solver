@@ -1,0 +1,1 @@
+{"version":3,"sources":["jQuery-begin.js","_events.js","jQuery-end.js"],"names":["document","ready","jQuery"],"mappings":"AAAA,CAAA,KAAA,CCAA,EAAAA,QAAA,EAAAC,KAAA,CAAA,IAAA,CAGA,CAHA,CCAA,CFAA,EEAAC,MFAA,C","file":"../main.js","sourcesContent":["(($) => {","$(document).ready(() => {\n  \n\n});","}) (jQuery);"]}

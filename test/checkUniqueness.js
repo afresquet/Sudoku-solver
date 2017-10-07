@@ -1,4 +1,4 @@
-const expect = require('chai').expect,
+const { expect } = require('chai'),
       getNonPermanentCells = require('../logic/getNonPermanentCells'),
       otherBoxPossibilities = require('../logic/checkUniqueness/otherBoxPossibilities'),
       otherRowPossibilities = require('../logic/checkUniqueness/otherRowPossibilities'),

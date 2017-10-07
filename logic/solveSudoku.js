@@ -1,4 +1,5 @@
 const fs = require('fs'),
+      createSudoku = require('./createSudoku'),
       getNonPermanentCells = require('./getNonPermanentCells'),
       globalCheck = require('./globalCheck/globalCheck'),
       checkUniqueness = require('./checkUniqueness/checkUniqueness'),
@@ -8,10 +9,14 @@ const fs = require('fs'),
 
 // Declare variables to hold the previous amount of non permanent cells
 // and the generation version.
-let prevLength,
+let sudoku,
+    prevLength,
     generation = 1;
 
-const solveSudoku = sudoku => {
+const solveSudoku = template => {
+  // Create a sudoku if it's the first time it runs.
+  if (!sudoku) sudoku = createSudoku(template);
+
   // Get the array of non permanent cells
   let cells = getNonPermanentCells(sudoku);
   

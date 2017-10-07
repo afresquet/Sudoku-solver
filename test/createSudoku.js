@@ -1,4 +1,4 @@
-const expect = require('chai').expect,
+const { expect } = require('chai'),
       createSudoku = require('../logic/createSudoku'),
       createDisplay = require('../logic/createDisplay');
 

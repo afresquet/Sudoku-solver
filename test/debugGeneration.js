@@ -1,4 +1,4 @@
-const expect = require('chai').expect,
+const { expect } = require('chai'),
       boxDebug = require('../logic/debugGeneration/boxDebug')
       rowDebug = require('../logic/debugGeneration/rowDebug')
       columnDebug = require('../logic/debugGeneration/columnDebug');

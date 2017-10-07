@@ -1,4 +1,4 @@
-const expect = require('chai').expect,
+const { expect } = require('chai'),
       getNonPermanentCells = require('../logic/getNonPermanentCells'),
       checkBox = require('../logic/globalCheck/checkBox'),
       checkRow = require('../logic/globalCheck/checkRow'),

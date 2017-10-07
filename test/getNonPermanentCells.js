@@ -1,4 +1,4 @@
-const expect = require('chai').expect,
+const { expect } = require('chai'),
       getNonPermanentCells = require('../logic/getNonPermanentCells');
 
 describe('Get non permanent cells', () => {

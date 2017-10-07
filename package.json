@@ -4,6 +4,7 @@
   "description": "A sudoku solver challenge I'm doing with a friend",
   "main": "sudoku.js",
   "scripts": {
+    "dependencies": "npm install body-parser cookie-parser express i18n pug && npm install --save-dev babel-core babel-preset-es2015 browser-sync chai clipboardy gulp gulp-autoprefixer gulp-babel gulp-clean-css gulp-concat gulp-file gulp-imagemin gulp-nodemon gulp-sass gulp-sourcemaps gulp-uglify gulp-yaml mocha",
     "test": "mocha"
   },
   "repository": {
@@ -17,7 +18,30 @@
   },
   "homepage": "https://github.com/afresquet/Sudoku-solver#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.1",
+    "i18n": "^0.8.3",
+    "pug": "^2.0.0-rc.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babili": "^0.1.4",
+    "browser-sync": "^2.18.13",
     "chai": "^4.1.2",
-    "mocha": "^3.5.3"
+    "clipboardy": "^1.1.4",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-babel": "^7.0.0",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-file": "^0.3.0",
+    "gulp-imagemin": "^3.4.0",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-yaml": "^1.0.1",
+    "mocha": "^4.0.1",
+    "pump": "^1.0.2"
   }
 }
