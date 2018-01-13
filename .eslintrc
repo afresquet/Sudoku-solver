@@ -21,6 +21,8 @@
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "no-underscore-dangle": [1, { "allow": ["_id"] }],
-    "jsx-a11y/anchor-is-valid": [ 1, { "allow": ["Link"]}]
+    "jsx-a11y/anchor-is-valid": [ 1, { "allow": ["Link"]}],
+    "no-bitwise": ["error", { "int32Hint": true }],
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }]
   }
 }
