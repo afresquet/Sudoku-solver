@@ -54,13 +54,11 @@ export default class Sudoku {
 	 * @param {Array.<Cell>} grid Array of cells
 	 */
 	static makeDisplay(grid) {
-		const display = [];
-		const values = grid.map(cell => cell.number);
+		function* slices(values) {
+			for (let i = 0; i < values.length; i += 9) yield values.slice(i, i + 9);
+		}
 
-		for (let i = 0; i < grid.length; i += 9)
-			display.push(values.slice(i, i + 9));
-
-		return display;
+		return [...slices(grid.map(cell => cell.number))];
 	}
 
 	/** Check to test if the solved sudoku is correct. */
