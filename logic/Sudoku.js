@@ -1,86 +1,102 @@
+// @ts-check
+
 import isEmpty from "lodash/isEmpty";
 import Cell from "./Cell";
 
+/** Sudoku instance. */
 export default class Sudoku {
-  constructor(template) {
-    this.template = template;
-    this.grid = this.create();
-  }
+	/**
+	 * @param {string} template Sudoku to resolve in a string with its values from left to right and top to bottom.
+	 */
+	constructor(template) {
+		this.template = template;
+		this.grid = Sudoku.createGrid(template);
+	}
 
-  algorithm() {
-    this.setEmptyCells();
+	/** Solving algorithm. */
+	algorithm() {
+		this.setEmptyCells();
 
-    if (isEmpty(this.emptyCells)) {
-      if (!this.finalCheck()) return "it's wrong";
+		if (isEmpty(this.emptyCells)) {
+			if (!this.finalCheck()) return "it's wrong";
 
-      return this.display;
-    }
-    if (this.emptyCells.length === this.prevEmptyCells)
-      return "can't be solved";
+			return Sudoku.makeDisplay(this.grid);
+		}
+		if (this.emptyCells.length === this.prevEmptyCells)
+			return "can't be solved";
 
-    this.emptyCells.forEach(cell => cell.checkPossibilities());
-    this.emptyCells.forEach(cell => cell.checkUniqueness());
+		this.emptyCells.forEach(cell => cell.checkPossibilities());
+		this.emptyCells.forEach(cell => cell.checkUniqueness());
 
-    this.prevEmptyCells = this.emptyCells.length;
+		this.prevEmptyCells = this.emptyCells.length;
 
-    return this.algorithm();
-  }
+		return this.algorithm();
+	}
 
-  create() {
-    const grid = this.template.split("").map((number, i) => {
-      const row = (i / 9) | 0;
-      const column = i % 9;
-      
-      return new Cell(parseInt(number, 10), row, column);
-    });
+	/**
+	 * Make a grid with the template values as its cells.
+	 * @param {string} template Sudoku template.
+	 */
+	static createGrid(template) {
+		const grid = template
+			.split("")
+			.map(
+				(value, i) => new Cell(parseInt(value, 10), i % 9, Math.floor(i / 9))
+			);
 
-    
-    grid.forEach(cell => cell.setNeighbors(grid));
+		grid.forEach(cell => cell.setNeighbors(grid));
 
-    return grid;
-  }
+		return grid;
+	}
 
-  get display() {
-    const display = [];
-    const values = this.grid.map(cell => cell.number);
+	/**
+	 * Make a 2D array to display the sudoku.
+	 * @param {Array.<Cell>} grid Array of cells
+	 */
+	static makeDisplay(grid) {
+		const display = [];
+		const values = grid.map(cell => cell.number);
 
-    for (let i = 0; i < this.grid.length; i += 9)
-      display.push(values.slice(i, i + 9));
+		for (let i = 0; i < grid.length; i += 9)
+			display.push(values.slice(i, i + 9));
 
-    return display;
-  }
+		return display;
+	}
 
-  finalCheck() {
-    Object.keys(this.axes).forEach(axis =>
-      this.axes[axis].forEach(group => {
-        const missing = [1, 2, 3, 4, 5, 6, 7, 8, 9].filter(
-          num => !group.find(neighbor => num === neighbor),
-        );
+	/** Check to test if the solved sudoku is correct. */
+	finalCheck() {
+		return Object.keys(this.axes).reduce(
+			(correct, axis) =>
+				correct &&
+				this.axes[axis].reduce((check, group) => {
+					const missing = [1, 2, 3, 4, 5, 6, 7, 8, 9].filter(
+						num => !group.find(neighbor => num === neighbor)
+					);
 
-        if (!isEmpty(missing)) return false;
-      }),
-    );
+					return check && isEmpty(missing);
+				}, true),
+			true
+		);
+	}
 
-    return true;
-  }
+	get axes() {
+		const axes = {
+			row: [[], [], [], [], [], [], [], [], []],
+			column: [[], [], [], [], [], [], [], [], []],
+			box: [[], [], [], [], [], [], [], [], []]
+		};
 
-  get axes() {
-    const axes = {
-      row: [[], [], [], [], [], [], [], [], []],
-      column: [[], [], [], [], [], [], [], [], []],
-      box: [[], [], [], [], [], [], [], [], []],
-    };
+		this.grid.forEach(cell =>
+			["row", "column", "box"].forEach(prop =>
+				axes[prop][cell.pos[prop]].push(cell.number)
+			)
+		);
 
-    this.grid.forEach(cell =>
-      ["row", "column", "box"].forEach(prop =>
-        axes[prop][cell.pos[prop]].push(cell.number),
-      ),
-    );
+		return axes;
+	}
 
-    return axes;
-  }
-
-  setEmptyCells() {
-    this.emptyCells = this.grid.filter(cell => cell.number === 0);
-  }
+	/** Set emptyCells property to all empty cells in the grid. */
+	setEmptyCells() {
+		this.emptyCells = this.grid.filter(cell => cell.number === 0);
+	}
 }
