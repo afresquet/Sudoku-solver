@@ -1,6 +1,3 @@
-// @ts-check
-
-import isEmpty from "lodash/isEmpty";
 import Cell from "./Cell";
 
 /** Sudoku instance. */
@@ -17,7 +14,7 @@ export default class Sudoku {
 	algorithm() {
 		this.setEmptyCells();
 
-		if (isEmpty(this.emptyCells)) {
+		if (this.emptyCells.length === 0) {
 			if (!this.finalCheck()) return "it's wrong";
 
 			return Sudoku.makeDisplay(this.grid);
@@ -51,7 +48,8 @@ export default class Sudoku {
 
 	/**
 	 * Make a 2D array to display the sudoku.
-	 * @param {Array.<Cell>} grid Array of cells
+	 * @param {Array.<Cell>} grid Array of cells.
+	 * @returns {Array.<Array.<number>>} 2D array.
 	 */
 	static makeDisplay(grid) {
 		function* slices(values) {
@@ -63,17 +61,13 @@ export default class Sudoku {
 
 	/** Check to test if the solved sudoku is correct. */
 	finalCheck() {
-		return Object.keys(this.axes).reduce(
-			(correct, axis) =>
-				correct &&
-				this.axes[axis].reduce((check, group) => {
-					const missing = [1, 2, 3, 4, 5, 6, 7, 8, 9].filter(
+		return Object.values(this.axes).every(axis =>
+			axis.every(
+				group =>
+					[1, 2, 3, 4, 5, 6, 7, 8, 9].filter(
 						num => !group.find(neighbor => num === neighbor)
-					);
-
-					return check && isEmpty(missing);
-				}, true),
-			true
+					).length === 0
+			)
 		);
 	}
 

@@ -20,18 +20,16 @@ export default class Cell {
 
 	/** Check the cell's neighbor's values to get its possibilities. */
 	checkPossibilities() {
-		const permanentNeighbors = Object.keys(this.neighbors).reduce(
-			(acc, axis) =>
-				acc.concat(
-					this.neighbors[axis]
-						.filter(cell => cell.number !== 0)
-						.map(cell => cell.number)
-				),
+		const permanentNeighbors = Object.values(this.neighbors).reduce(
+			(acc, axis) => [
+				...acc,
+				...axis.filter(cell => cell.number !== 0).map(cell => cell.number)
+			],
 			[]
 		);
 
 		this.possibilities = [1, 2, 3, 4, 5, 6, 7, 8, 9].filter(
-			num => !permanentNeighbors.find(neighbor => num === neighbor)
+			number => !permanentNeighbors.find(neighbor => number === neighbor)
 		);
 	}
 
@@ -53,30 +51,29 @@ export default class Cell {
 		});
 
 		this.possibilities.forEach(possibility => {
-			const results = Object.keys(neighborsPossibilities).map(
-				axis =>
-					!neighborsPossibilities[axis].find(
-						neighborPos => possibility === neighborPos
-					)
+			const results = Object.values(neighborsPossibilities).map(
+				axis => !axis.find(neighborPos => possibility === neighborPos)
 			);
 
 			if (results.find(unique => unique)) this.number = possibility;
 		});
 	}
 
-	get number() {
-		return this.value;
-	}
-
-	set number(num) {
-		this.value = num;
+	/** @param {number} value Cell's value */
+	set number(value) {
+		this.value = value;
 		this.possibilities.length = 0;
 
-		Object.keys(this.neighbors).forEach(neighbors => {
-			this.neighbors[neighbors].forEach(neighbor => {
+		Object.values(this.neighbors).forEach(neighbors => {
+			neighbors.forEach(neighbor => {
 				if (neighbor.value === 0) neighbor.checkPossibilities();
 			});
 		});
+	}
+
+	/** @returns {number} Cell's value */
+	get number() {
+		return this.value;
 	}
 
 	/**
