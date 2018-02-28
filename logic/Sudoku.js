@@ -1,8 +1,8 @@
 import Cell from "./Cell";
 
-/** Sudoku instance. */
 export default class Sudoku {
 	/**
+	 * @description Sudoku instance.
 	 * @param {string} template Sudoku to resolve in a string with its values from left to right and top to bottom.
 	 */
 	constructor(template) {
@@ -10,7 +10,7 @@ export default class Sudoku {
 		this.grid = Sudoku.createGrid(template);
 	}
 
-	/** Solving algorithm. */
+	/** @description Solving algorithm. */
 	algorithm() {
 		this.setEmptyCells();
 
@@ -31,7 +31,7 @@ export default class Sudoku {
 	}
 
 	/**
-	 * Make a grid with the template values as its cells.
+	 * @description Make a grid with the template values as its cells.
 	 * @param {string} template Sudoku template.
 	 */
 	static createGrid(template) {
@@ -47,7 +47,7 @@ export default class Sudoku {
 	}
 
 	/**
-	 * Make a 2D array to display the sudoku.
+	 * @description Make a 2D array to display the sudoku.
 	 * @param {Array.<Cell>} grid Array of cells.
 	 * @returns {Array.<Array.<number>>} 2D array.
 	 */
@@ -59,7 +59,7 @@ export default class Sudoku {
 		return [...slices(grid.map(cell => cell.number))];
 	}
 
-	/** Check to test if the solved sudoku is correct. */
+	/** @description Check to test if the solved sudoku is correct. */
 	finalCheck() {
 		return Object.values(this.axes).every(axis =>
 			axis.every(
@@ -87,7 +87,7 @@ export default class Sudoku {
 		return axes;
 	}
 
-	/** Set emptyCells property to all empty cells in the grid. */
+	/** @description Set emptyCells property to all empty cells in the grid. */
 	setEmptyCells() {
 		this.emptyCells = this.grid.filter(cell => cell.number === 0);
 	}

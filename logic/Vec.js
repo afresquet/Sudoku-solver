@@ -1,6 +1,6 @@
-/** Vector to hold row, column, and box of a cell. */
 export default class Vec {
 	/**
+	 * @description Vector to hold row, column, and box of a cell.
 	 * @param {number} x Cell's column
 	 * @param {number} y Cell's row
 	 */
@@ -11,7 +11,7 @@ export default class Vec {
 	}
 
 	/**
-	 * Calculate in which of the 9 boxes the Cell is located.
+	 * @description Calculate in which of the 9 boxes the Cell is located.
 	 * @param {number} x Cell's column position.
 	 * @param {number} y Cell's row position.
 	 */

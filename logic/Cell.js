@@ -1,8 +1,8 @@
 import Vec from "./Vec";
 
-/** A Sudoku cell entity. */
 export default class Cell {
 	/**
+	 * @description A Sudoku cell entity.
 	 * @param {number} value Cell's value.
 	 * @param {number} x Cell's column
 	 * @param {number} y Cell's row
@@ -18,7 +18,7 @@ export default class Cell {
 		this.possibilities = [];
 	}
 
-	/** Check the cell's neighbor's values to get its possibilities. */
+	/** @description Check the cell's neighbor's values to get its possibilities. */
 	checkPossibilities() {
 		const permanentNeighbors = Object.values(this.neighbors).reduce(
 			(acc, axis) => [
@@ -33,7 +33,7 @@ export default class Cell {
 		);
 	}
 
-	/** Compare the cell's possibilities with its empty neigbors to find a unique one. */
+	/** @description Compare the cell's possibilities with its empty neigbors to find a unique one. */
 	checkUniqueness() {
 		if (this.possibilities.length === 1) {
 			[this.number] = this.possibilities;
@@ -77,7 +77,7 @@ export default class Cell {
 	}
 
 	/**
-	 * Set the cell's neighbors.
+	 * @description Set the cell's neighbors.
 	 * @param {Array.<Cell>} sudoku Grid to compare the cell against.
 	 */
 	setNeighbors(sudoku) {
