@@ -1,6 +1,6 @@
-import Sudoku from "./logic/Sudoku";
+import Sudoku from "./Sudoku";
 
-// Examples taken from a sudoku app for iOS to test the app.
+// Examples taken from a sudoku app for iOS.
 const templates = {
 	easy:
 		"008000000490157002003004190185060020000020060960405300030072004049030057827009013",
@@ -9,7 +9,14 @@ const templates = {
 	hard:
 		"586070000000901600000600000007000000902010305005090000090040008003500060000020470",
 	expert:
-		"020000003600031000500000084370000501000060009000400000000007800200090040050200100"
+		"020000003600031000500000084370000501000060009000400000000007800200090040050200100",
 };
 
-console.log(new Sudoku(templates.medium).algorithm());
+const sudoku = new Sudoku(templates.easy);
+
+try {
+	const result = sudoku.solve();
+	console.table(result);
+} catch (error) {
+	console.error(error);
+}
